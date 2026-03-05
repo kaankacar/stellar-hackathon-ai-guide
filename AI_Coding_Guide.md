@@ -1,7 +1,7 @@
-# Stellar Development Foundation Hackathon — AI Tools Guide
+# Stellar Development Foundation Hackathon: AI Tools Guide
 ## Using Open-Source AI Models for Coding
 
-**Prepared for: SDF Hackathon — Mexico**
+**Prepared for: SDF Hackathon, Mexico**
 **Date: March 2026**
 
 ---
@@ -13,7 +13,7 @@
 3. [How to Use a Local Model with Claude Code](#claude-code-guide)
 4. [Running Your Model on a VPS](#vps-guide)
 5. [Free AI Coding Alternatives](#free-alternatives)
-6. [About Stella — Stellar's AI Assistant](#stella)
+6. [About Stella: Stellar's AI Assistant](#stella)
 
 ---
 
@@ -22,11 +22,11 @@
 As a hacker at this event, you have several options when it comes to AI-powered coding assistance:
 
 - **Paid plans**: If you already have a subscription to Claude, ChatGPT, GitHub Copilot, or another AI service, you can continue using those normally.
-- **Open-source local models**: You can download a free, open-source AI model and run it on your own computer — no subscription required, no data leaving your machine.
+- **Open-source local models**: You can download a free, open-source AI model and run it on your own computer, with no subscription required and no data leaving your machine.
 - **Cloud VPS**: If your laptop doesn't have enough power to run a large model, you can rent a GPU server for a few dollars and run the model there.
 - **Free tiers**: Tools like Cursor offer free plans with access to capable AI models.
 
-This guide focuses on helping you get set up with open-source models from Hugging Face — the world's largest platform for sharing and downloading AI models — so you can code with AI entirely for free.
+This guide focuses on helping you get set up with open-source models from Hugging Face (the world's largest platform for sharing and downloading AI models) so you can code with AI entirely for free.
 
 ---
 
@@ -59,14 +59,14 @@ Qwen2.5-Coder is a family of open-source code-specialized large language models 
 | Model Size | Minimum VRAM (GPU) | Recommended RAM (CPU-only) |
 |---|---|---|
 | 1.5B | 4 GB VRAM | 8 GB RAM |
-| 7B | 8–10 GB VRAM | 16 GB RAM |
+| 7B | 8-10 GB VRAM | 16 GB RAM |
 | 32B | 24 GB VRAM | 64 GB RAM |
 
-> Tip: Quantized (compressed) versions reduce memory needs by 50–75% with minimal quality loss. Always look for GGUF or AWQ versions if your hardware is limited.
+> Tip: Quantized (compressed) versions reduce memory needs by 50-75% with minimal quality loss. Always look for GGUF or AWQ versions if your hardware is limited.
 
 **Hugging Face page:** https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct
 
-**How to install (using Ollama — recommended method):**
+**How to install (using Ollama - recommended method):**
 
 ```bash
 # Step 1: Install Ollama (see Section 3 for full Ollama setup)
@@ -103,7 +103,7 @@ DeepSeek-Coder-V2 is a powerful open-source coding model from the Chinese AI lab
 
 | Model | Minimum VRAM | Notes |
 |-------|-------------|-------|
-| DeepSeek-Coder-V2-Lite | 16–24 GB VRAM | RTX 3090 or RTX 4090 |
+| DeepSeek-Coder-V2-Lite | 16-24 GB VRAM | RTX 3090 or RTX 4090 |
 | DeepSeek-Coder-V2 | 80+ GB VRAM | Requires A100/H100 or multi-GPU |
 
 **Hugging Face page:** https://huggingface.co/deepseek-ai/DeepSeek-Coder-V2-Instruct
@@ -136,8 +136,8 @@ Codestral is Mistral AI's dedicated code model. It has 22 billion parameters and
 | Configuration | Requirement |
 |---|---|
 | Minimum VRAM (full precision) | 44 GB VRAM |
-| Recommended VRAM (quantized) | 16–24 GB VRAM |
-| CPU-only (quantized) | 32–64 GB RAM |
+| Recommended VRAM (quantized) | 16-24 GB VRAM |
+| CPU-only (quantized) | 32-64 GB RAM |
 
 **Hugging Face page:** https://huggingface.co/mistralai/Codestral-22B-v0.1
 
@@ -158,7 +158,7 @@ ollama run codestral
 ### Model 4: StarCoder2 (by BigCode / Hugging Face)
 
 **What it is:**
-StarCoder2 is a family of open-source code models created by the BigCode project — a collaboration between Hugging Face and ServiceNow. It was trained transparently on permissively licensed code from GitHub, making it one of the most ethically sourced coding models available. It supports 600+ programming languages.
+StarCoder2 is a family of open-source code models created by the BigCode project, a collaboration between Hugging Face and ServiceNow. It was trained transparently on permissively licensed code from GitHub, making it one of the most ethically sourced coding models available. It supports 600+ programming languages.
 
 **What it does:**
 - Code generation and completion
@@ -254,7 +254,7 @@ Microsoft's Phi-4 is a small but surprisingly capable model with only 14 billion
 | Configuration | Requirement |
 |---|---|
 | Minimum VRAM | 8 GB VRAM |
-| Recommended VRAM | 12–16 GB VRAM |
+| Recommended VRAM | 12-16 GB VRAM |
 | CPU-only RAM | 16 GB RAM |
 
 **Hugging Face page:** https://huggingface.co/microsoft/phi-4
@@ -286,7 +286,7 @@ ollama run phi4
 
 ## 3. How to Use a Local Model with Claude Code
 
-Claude Code is the AI coding assistant you can run in your terminal. By default it uses Anthropic's Claude models in the cloud, but it can be pointed to a locally running open-source model instead — meaning you can use Claude Code completely free with no API credits required.
+Claude Code is the AI coding assistant you can run in your terminal. By default it uses Anthropic's Claude models in the cloud, but it can be pointed to a locally running open-source model instead, meaning you can use Claude Code completely free with no API credits required.
 
 This works through **Ollama**, a tool that runs AI models locally and exposes them through an API that Claude Code can talk to.
 
@@ -426,7 +426,7 @@ claude --model my-coder
 
 To avoid setting environment variables every session, add them to your shell profile:
 
-**macOS / Linux** — add to `~/.zshrc` or `~/.bashrc`:
+**macOS / Linux** - add to `~/.zshrc` or `~/.bashrc`:
 ```bash
 export ANTHROPIC_BASE_URL="http://localhost:11434"
 export ANTHROPIC_AUTH_TOKEN="ollama"
@@ -444,7 +444,7 @@ source ~/.zshrc
 
 - **Smaller models are faster but less accurate.** Start with a 7B model and upgrade if you need better results.
 - **Quantized models (Q4, Q8)** use much less memory with only a small drop in quality. Ollama downloads quantized versions automatically.
-- **If tool calls fail**, try switching to `llama3.1:8b` — it has the best tool-calling compatibility with Claude Code.
+- **If tool calls fail**, try switching to `llama3.1:8b`, which has the best tool-calling compatibility with Claude Code.
 - **Close other heavy applications** while running local models to free up RAM and VRAM.
 
 ---
@@ -474,16 +474,16 @@ If your laptop doesn't have enough GPU power to run a capable model locally, you
 
 **Step 1: Create an account**
 
-Go to https://runpod.io and sign up. Add a payment method (credit card or crypto accepted). You only need ~$10–20 for a full hackathon weekend.
+Go to https://runpod.io and sign up. Add a payment method (credit card or crypto accepted). You only need ~$10-20 for a full hackathon weekend.
 
 **Step 2: Create a new Pod**
 
 1. Click "Pods" in the left sidebar
 2. Click "+ Deploy"
 3. Select a GPU:
-   - **RTX 4090 (24 GB VRAM)** — best value, runs 7B–32B models
-   - **RTX 3090 (24 GB VRAM)** — slightly cheaper
-   - **A100 (80 GB VRAM)** — for 70B models, more expensive
+   - **RTX 4090 (24 GB VRAM)**: best value, runs 7B-32B models
+   - **RTX 3090 (24 GB VRAM)**: slightly cheaper
+   - **A100 (80 GB VRAM)**: for 70B models, more expensive
 4. For the template/container, select **"RunPod PyTorch"** or search for "Ollama"
 5. Set disk storage to at least **50 GB** (models are large files)
 6. Click "Deploy"
@@ -541,7 +541,7 @@ To avoid charges, go to the RunPod dashboard and stop or terminate your pod when
 
 ### Step-by-Step: Setting Up on Vast.ai (Budget Option)
 
-**Step 1:** Sign up at https://vast.ai and add credit ($5–10 is enough for a weekend)
+**Step 1:** Sign up at https://vast.ai and add credit ($5-10 is enough for a weekend)
 
 **Step 2:** Go to "Search" and filter by:
 - GPU: RTX 3090 or RTX 4090
@@ -550,7 +550,7 @@ To avoid charges, go to the RunPod dashboard and stop or terminate your pod when
 
 **Step 3:** Click "Rent" on your chosen machine and select the **"PyTorch"** image
 
-**Step 4:** Once running, open the SSH connection and follow the same Ollama installation steps as above (Steps 4–7 from RunPod guide)
+**Step 4:** Once running, open the SSH connection and follow the same Ollama installation steps as above (Steps 4-7 from RunPod guide)
 
 ---
 
@@ -558,11 +558,11 @@ To avoid charges, go to the RunPod dashboard and stop or terminate your pod when
 
 | GPU | VRAM | Models it can run | Approx. Cost |
 |-----|------|-------------------|-------------|
-| RTX 3060 / 4060 | 12 GB | Up to 7B (quantized) | ~$0.10–0.20/hr |
-| RTX 3090 / 4090 | 24 GB | Up to 32B (quantized) | ~$0.20–0.50/hr |
-| A100 40 GB | 40 GB | Up to 70B (quantized) | ~$1.00–1.50/hr |
-| A100 80 GB | 80 GB | 70B+ full precision | ~$1.50–2.50/hr |
-| H100 | 80 GB | Largest models | ~$2.50–4.00/hr |
+| RTX 3060 / 4060 | 12 GB | Up to 7B (quantized) | ~$0.10-0.20/hr |
+| RTX 3090 / 4090 | 24 GB | Up to 32B (quantized) | ~$0.20-0.50/hr |
+| A100 40 GB | 40 GB | Up to 70B (quantized) | ~$1.00-1.50/hr |
+| A100 80 GB | 80 GB | 70B+ full precision | ~$1.50-2.50/hr |
+| H100 | 80 GB | Largest models | ~$2.50-4.00/hr |
 
 ---
 
@@ -601,7 +601,7 @@ GitHub Copilot now has a free tier:
 1. Go to GitHub Settings > Copilot
 2. Enable the free plan
 3. Install the Copilot extension in VS Code
-4. Start coding — suggestions appear automatically
+4. Start coding; suggestions appear automatically
 
 ---
 
@@ -610,7 +610,7 @@ GitHub Copilot now has a free tier:
 - Free access to Gemini 2.0 Flash (very capable model)
 - Large context window (1 million tokens)
 - Great for pasting large amounts of code and getting explanations
-- No subscription required — just a Google account
+- No subscription required, just a Google account
 
 ---
 
@@ -625,13 +625,13 @@ export ANTHROPIC_API_KEY="your-openrouter-key"
 
 ---
 
-## 6. About Stella — Stellar's AI Assistant
+## 6. About Stella: Stellar's AI Assistant
 
 **What is Stella?**
 
 Stella is the official AI assistant developed by the Stellar Development Foundation (SDF) and available on the Stellar developer documentation website at https://developers.stellar.org.
 
-Stella is specifically designed to help developers who are building on the Stellar blockchain network. It is currently in beta and was created to make Stellar development faster and more accessible — especially for developers who are new to the ecosystem.
+Stella is specifically designed to help developers who are building on the Stellar blockchain network. It is currently in beta and was created to make Stellar development faster and more accessible, especially for developers who are new to the ecosystem.
 
 **What can Stella do?**
 
