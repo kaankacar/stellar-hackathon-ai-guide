@@ -34,7 +34,7 @@ Tools for using AI while writing code. Most have generous free tiers.
 
 | Tool | Free Tier | Best For | Link |
 |---|---|---|---|
-| **Claude Code** | Paid (or free via Ollama; see `AI_Coding_Guide.md`) | Terminal-based agentic coding, full repo context | n/a |
+| **Claude Code** | Paid (or free via Ollama; see `AI_Coding_Guide.md`) | Terminal-based agentic coding, full repo context | https://claude.com/product/claude-code |
 | **Continue** | Fully free (open source) | VS Code/JetBrains, works with any local or cloud model | https://continue.dev |
 | **Cursor** | 2,000 completions/mo | VS Code-like IDE with AI built in | https://cursor.com |
 | **Aider** | Fully free | Terminal + Git integration, model-agnostic | https://aider.chat |
