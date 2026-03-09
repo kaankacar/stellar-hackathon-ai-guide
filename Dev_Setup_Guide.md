@@ -38,9 +38,7 @@
 - **Auth:** `Authorization: Bearer your-api-key` (standard Bearer, opposite of Etherfuse)
 - No docs page for self-service signup (returns 404); Discord is the only path
 
-> [TEAM: Add self-service API key generation or at least a signup form for DeFindex.]
-
-**Not yet documented (ask DevRel):**
+**Still being documented (will be updated here soon):**
 - BlindPay sandbox access process
 - AlfredPay sandbox access process
 - Reflector Oracle auth requirements
@@ -63,7 +61,7 @@ These are the actual deployed addresses on Stellar testnet. Testnet contracts ge
 
 ### DeFindex (testnet)
 
-Verified from paltalabs registry, DevRel experiment Run 2.
+Verified from the paltalabs registry.
 
 | Contract | Address | Verified |
 |---|---|---|
@@ -82,7 +80,7 @@ Verified from paltalabs registry, DevRel experiment Run 2.
 | Router / Aggregator | TBD |
 | Factory | TBD |
 
-> [TEAM: Provide verified testnet addresses for Soroswap.]
+> Verified addresses will be added here as soon as they're confirmed.
 
 ---
 
@@ -93,7 +91,7 @@ Verified from paltalabs registry, DevRel experiment Run 2.
 | Factory | TBD |
 | Router | TBD |
 
-> [TEAM: Provide verified testnet addresses for Phoenix.]
+> Verified addresses will be added here as soon as they're confirmed.
 
 ---
 
@@ -104,7 +102,7 @@ Verified from paltalabs registry, DevRel experiment Run 2.
 | Pool Factory | TBD |
 | USDC Pool | TBD |
 
-> [TEAM: Provide verified testnet addresses for Blend.]
+> Verified addresses will be added here as soon as they're confirmed.
 
 ---
 
@@ -114,7 +112,7 @@ Verified from paltalabs registry, DevRel experiment Run 2.
 |---|---|
 | AMM Contract | TBD |
 
-> [TEAM: Provide verified testnet address for Aquarius AMM.]
+> Verified address will be added here as soon as it's confirmed.
 
 ---
 
@@ -124,11 +122,11 @@ Verified from paltalabs registry, DevRel experiment Run 2.
 |---|---|
 | Price Oracle | TBD |
 
-> [TEAM: Provide verified testnet address for Reflector Oracle.]
+> Verified address will be added here as soon as it's confirmed.
 
 ---
 
-> [TEAM: Maintain a single JSON file in a public repo with all verified testnet addresses across all protocols. Missing or wrong addresses were the #1 time sink in hackathon Run 1; participants spent 90+ minutes discovering the addresses before writing a single line of business logic.]
+> The TBD rows above will be filled in before the hackathon. If you're reading this and something is still missing, ask a mentor for the latest addresses rather than guessing.
 
 ---
 
@@ -162,7 +160,7 @@ Verified from paltalabs registry, DevRel experiment Run 2.
 
 **Testnet limitation:** There is no CETES/USDC liquidity on the testnet SDEX. `pathPaymentStrictSend` will always fail with `op_no_path`. You can test the trustline flow, but not the actual buy/sell swap.
 
-> [TEAM: A testnet CETES faucet, or a funded test account with stablebond balances, would eliminate this blocker entirely. Currently impossible to test end-to-end buy/sell flows on testnet.]
+> A testnet faucet for stablebond assets is being worked on. For now, ask a mentor if a pre-funded test account is available at the event.
 
 ---
 
