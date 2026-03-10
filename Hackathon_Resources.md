@@ -6,7 +6,7 @@ A curated navigation guide for Stellar ecosystem resources, gotchas, starter cod
 
 ## 1. Environment and API Setup
 
-Everything you need before writing a line of code.
+Everything you need before writing a line of code. For the full reference (API keys, verified contract addresses, auth patterns, and setup gotchas), see `Dev_Setup_Guide.md`.
 
 ### Testnet Quick Reference
 
@@ -97,3 +97,16 @@ Integrates Blend, Soroswap, Phoenix, Aquarius, SDEX, and Reflector Oracle in a s
 | **Awesome Stellar Community Fund** (lumenloop) | 9 AI skills for SCF grant applications + full guides on what gets funded. Useful post-hackathon if applying for SCF. | https://github.com/lumenloop/awesome-stellar-community-fund |
 
 **How to use the Ecosystem DB:** Find existing projects in your category to avoid reinventing the wheel, discover integration partners, check on-chain contract addresses.
+
+---
+
+## 5. Videos Worth Watching
+
+From the Build on Stellar channel and Kaan Kacar (Senior Developer Advocate at SDF).
+
+| Title | Description | Link |
+|---|---|---|
+| **Scoping and Evaluating Your Project** | How to evaluate and validate your idea before building. A must-watch before writing any code. | https://x.com/BuildOnStellar/status/2029288908639666402 |
+| **A First Look: Nethermind's SPP** | Stellar Private Payments (ZK-based privacy layer on Stellar) | https://x.com/i/broadcasts/1pKkOyOyOnwKj |
+| **Vibe Coding 5 ZK Games in 90 Minutes** | Live demo using 5 different AI models to build 5 ZK games in 90 minutes | https://x.com/i/broadcasts/1dRKZaYYbbdxB |
+| **The Builder's Guide to AI Prompt Engineering** | How to write better prompts for AI-assisted development | https://x.com/BuildOnStellar/status/2008902190090613013 |

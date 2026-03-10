@@ -134,15 +134,3 @@ Good for: server-side automation, CI pipelines, headless scraping, any context w
 - Repo: https://github.com/vercel-labs/agent-browser
 - Install: `npm install -g @vercel/agent-browser` or via Homebrew
 
----
-
-## 5. Videos and Demos
-
-From the Build on Stellar channel and Kaan Kacar (Senior Developer Advocate at SDF).
-
-| Title | Description | Link |
-|---|---|---|
-| **Scoping and Evaluating Your Project** | How to evaluate and validate your idea before building. A must-watch before writing any code. | https://x.com/BuildOnStellar/status/2029288908639666402 |
-| **A First Look: Nethermind's SPP** | Stellar Private Payments (ZK-based privacy layer on Stellar) | https://x.com/i/broadcasts/1pKkOyOyOnwKj |
-| **Vibe Coding 5 ZK Games in 90 Minutes** | Live demo using 5 different AI models to build 5 ZK games in 90 minutes | https://x.com/i/broadcasts/1dRKZaYYbbdxB |
-| **The Builder's Guide to AI Prompt Engineering** | How to write better prompts for AI-assisted development | https://x.com/BuildOnStellar/status/2008902190090613013 |
