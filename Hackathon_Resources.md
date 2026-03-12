@@ -13,7 +13,7 @@ Everything you need before writing a line of code. For the full reference (API k
 |---|---|
 | Soroban RPC (testnet) | `https://soroban-testnet.stellar.org` |
 | Horizon (testnet) | `https://horizon-testnet.stellar.org` |
-| Etherfuse sandbox | `https://sandbox.etherfuse.com` |
+| Etherfuse sandbox | `https://devnet.etherfuse.com` |
 | Friendbot (fund testnet accounts) | `https://friendbot.stellar.org` |
 | Testnet USDC issuer (Circle) | `GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5` |
 | Testnet USDC issuer (Blend/Etherfuse) | `GATALTGTWIOT6BUDBCZM3Q4OQ4BO2COLOAZ7IYSKPLC2PMSOPPGF5V56` |
