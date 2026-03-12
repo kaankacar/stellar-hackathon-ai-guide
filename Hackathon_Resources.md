@@ -20,14 +20,14 @@ Everything you need before writing a line of code. For the full reference (API k
 
 ### API Keys to Get Early
 
-- **Etherfuse sandbox key:** https://etherfuse.com (developer signup)
+- **Etherfuse sandbox key:** https://devnet.etherfuse.com (developer signup)
 - **Soroswap/DeFindex:** no key needed on testnet
 - **BlindPay / AlfredPay:** check their respective docs for sandbox access
 
 ### Things Worth Knowing Upfront
 
 - Testnet USDC has two different issuers depending on which protocol you're using; they don't share liquidity. Check which one your protocol expects before swapping.
-- Etherfuse: your `customer_id` is permanent. Generate it once, store it, reuse it.
+- Etherfuse: each end-user of your app gets a permanent `customer_id` and `bank_account_id`. Generate them once per user, store them, reuse them forever. Never create duplicates.
 - Stellar memos max out at 28 bytes. Anything longer silently fails.
 - SDK v14 renamed several core types. If copying older examples, check the migration notes.
 
@@ -47,7 +47,7 @@ The fastest path to a working integration with Mexican peso rails.
 
 **Repo:** https://github.com/ElliotFriend/regional-starter-pack
 
-A SvelteKit app paired with a portable TypeScript anchor library containing three anchor integrations. The key insight: `/src/lib/anchors/` is framework-agnostic; copy it into any TypeScript or Node project and it works without the SvelteKit wrapper.
+A SvelteKit app that serves as a reference implementation for SEP-compliant anchor integrations, paired with a portable TypeScript anchor library. The `/src/lib/anchors/` folder contains individual client implementations for each anchor (Etherfuse, AlfredPay, BlindPay), each following the same SEP interface. It's framework-agnostic; copy it into any TypeScript or Node project and it works without the SvelteKit wrapper.
 
 ### Anchor Providers Included
 
