@@ -70,6 +70,12 @@ A SvelteKit app with a portable TypeScript anchor library. The `/src/lib/anchors
 **DeFi reference implementation**: https://github.com/kaankacar/stellar-defi-app
 A full mainnet DeFi dashboard integrating Blend (lending/borrowing with health factor monitoring), Soroswap Aggregator (DEX routing), Phoenix DEX, Aquarius AMM, SDEX, and Reflector Oracle (on-chain USD price feeds). Most useful for seeing how the protocols compose: actual API call shapes, response formats, and how to wire everything together.
 
+**AI Integration Series (carstenjacobsen):** Four focused Next.js + TypeScript apps built with Claude Code, each paired with a BUILD_REPORT.md:
+- [ai-freighter-integration](https://github.com/carstenjacobsen/ai-freighter-integration): Freighter wallet connection, balance display, send payments, transaction history
+- [ai-soroswap-integration](https://github.com/carstenjacobsen/ai-soroswap-integration): Multi-DEX swap aggregator across Soroswap, Phoenix, Aqua, and SDEX
+- [ai-defindex-integration](https://github.com/carstenjacobsen/ai-defindex-integration): DeFindex yield vault deposits/withdrawals and dfToken balance tracking
+- [ai-passkeys-integration](https://github.com/carstenjacobsen/ai-passkeys-integration): WebAuthn passkey smart wallet with Etherfuse MXN ↔ CETES on/off-ramp
+
 **Community resources:**
 - Stellar Hackathon FAQ (briwylde08): https://github.com/briwylde08/stellar-hackathon-faq
 - Stellar DeFi Gotchas (kaankacar): https://github.com/kaankacar/stellar-defi-gotchas (400+ findings from 60 vibe-coding runs, organized by protocol)
