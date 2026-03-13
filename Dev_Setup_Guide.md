@@ -270,6 +270,25 @@ await server.sendTransaction(assembled);
 Skipping simulation causes confusing failures. This is different from classic Stellar and easy to miss.
 
 
+### Soroban: wrong network passphrase gives tx_bad_auth
+
+A network passphrase mismatch (e.g. using mainnet passphrase against testnet)
+produces `tx_bad_auth`, not a network error. Always derive passphrase from
+`Networks.TESTNET` or `Networks.PUBLIC` rather than hardcoding the string.
+
+
+### Soroban: storage entries expire — extend TTLs proactively
+
+Soroban storage entries (persistent and instance) have a TTL measured in ledgers.
+When they expire, the data is archived and reads return a missing-value error with
+no warning. Extend proactively:
+
+- Check TTL threshold: ~100 ledgers remaining
+- Extend target: ~518400 ledgers (~30 days)
+- Use `bump_instance_storage` / `bump_persistent_storage` in your contract, or
+  `server.restoreFootprint()` from the JS SDK if the entry is already archived.
+
+
 ### sendTransaction returns PENDING, not success
 
 `sendTransaction` returning without error does NOT mean the transaction succeeded. Poll with a max retry ceiling:
@@ -375,6 +394,13 @@ const signedXdr = result.signedTxXdr; // required in v6
 
 Soroban smart contract calls go to `rpc.Server` (Soroban RPC). Classic operations (Payment, ChangeTrust, etc.) go to `Horizon.Server`. Routing a classic operation to Soroban RPC or vice versa silently fails. Passkey/smart wallet XLM transfers use the Soroban SAC; Freighter account transfers use classic Horizon.
 
+| Need | Use |
+|---|---|
+| Smart contract calls (invoke, simulate, send) | Soroban RPC (`rpc.Server`) |
+| Classic payments, ChangeTrust, account creation | Horizon (`Horizon.Server`) |
+| Historical transaction lookup, payment streaming | Horizon (Soroban RPC has no history) |
+| Account sequence number | Either (both work) |
+
 
 ### WebAuthn passkeys: rpId must be a domain, not an IP address
 
@@ -402,3 +428,15 @@ These are things that don't work smoothly yet or aren't documented. If you hit a
 - **Etherfuse response envelope inconsistency:** `orderId` vs `order_id` vs `id` varies by endpoint; onramp/offramp responses are wrapped differently. The normalizer in Section 5 handles this.
 - **Phoenix rate limiting returns 403:** looks like an auth error but it's actually a rate limit. If you get a sudden 403 from Phoenix after things were working, wait and retry.
 - **Stellar Wallets Kit v1 vs v2:** breaking change between versions where instance methods became static methods. If you're copying examples from the web and they don't work, check which version you're running.
+
+  ```typescript
+  // v1 (broken — do not use)
+  const kit = new StellarWalletsKit({ ... });
+
+  // v2 (correct)
+  const kit = StellarWalletsKit.build({
+    network: WalletNetwork.TESTNET,
+    selectedWalletId: FREIGHTER_ID,
+    modules: allowAllModules(),
+  });
+  ```
