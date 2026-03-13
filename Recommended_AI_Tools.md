@@ -15,7 +15,7 @@ Start here. These are unique to the Stellar ecosystem.
 | **OpenZeppelin skills** | Claude Code skills for secure Stellar contract development: `setup-stellar-contracts`, `upgrade-stellar-contracts`, and `develop-secure-contracts`. Installs optional MCP servers for AI-assisted contract generation. | Install: `/plugin marketplace add OpenZeppelin/openzeppelin-skills` in Claude Code; repo: https://github.com/OpenZeppelin/openzeppelin-skills |
 | **Smart Account Kit** (kalepail) | TypeScript SDK for building passkey smart wallets on Soroban: `createWallet`, `connectWallet` (silent session restore), `signAndSubmit`, gasless tx via OZ Relayer, multiple signer types (passkeys, Ed25519, policies) | https://github.com/kalepail/smart-account-kit |
 | **Stellar MCP Server** (kalepail) | MCP server running on Cloudflare Workers; exposes Stellar wallet, token, and contract tools to Claude and other AI clients | https://github.com/kalepail/stellar-mcp-server |
-| **XDR MCP** (leighmcculloch) | MCP server that decodes and encodes Stellar XDR to/from JSON for AI agents | https://github.com/leighmcculloch/mcp-stellar-xdr |
+| **XDR MCP** (leighmcculloch) | MCP server that decodes and encodes Stellar XDR to/from JSON for AI agents | https://github.com/stellar-experimental/mcp-stellar-xdr |
 | **Scaffold Stellar** | CLI tool for the full Stellar app development lifecycle — smart contract management, testing, and deployment with enforced best practices baked in. Install: `cargo install --locked stellar-scaffold-cli` | https://scaffoldstellar.org |
 | **x402** | Per-request HTTP payment protocol for AI agents, powered by Soroban auth entry signing | https://developers.stellar.org/docs/build/apps/x402 |
 
