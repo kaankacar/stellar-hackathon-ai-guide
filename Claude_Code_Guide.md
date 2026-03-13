@@ -131,12 +131,28 @@ See `Starter_Prompts.md` for a ready-to-fill CLAUDE.md template for Stellar proj
 
 | Plugin / Skill | What it does | Install |
 |---|---|---|
-| `stellar-dev:stellar-dev` | Full Stellar development playbook: Soroban, SDKs, RPC, wallet integration, passkeys, security patterns | Pre-installed in Claude Code; invoke by name |
+| `stellar-dev:stellar-dev` | Full Stellar development playbook covering 8 modules: Soroban contracts (Rust), RPC vs Horizon, frontend + wallet integration, classic assets + SAC, common pitfalls, security checklist, testing strategy, ecosystem catalog. | Pre-installed in Claude Code; invoke by name |
 | `openzeppelin-skills` | Three skills: `setup-stellar-contracts`, `upgrade-stellar-contracts`, `develop-secure-contracts`. Installs OZ MCP server for AI-assisted contract generation. | `/plugin marketplace add OpenZeppelin/openzeppelin-skills` |
 
 ### How to Invoke a Skill
 
 Type the skill name in the chat or use the colon syntax: `stellar-dev:stellar-dev`. Claude will load the playbook and apply it to your current task.
+
+
+### What's in stellar-dev
+
+The skill loads 8 reference modules on demand. Invoke the skill and tell Claude which area you're working in:
+
+| Module | Invoke when |
+|---|---|
+| `contracts-soroban` | Writing or debugging a Soroban contract in Rust: storage types, TTL, auth, events, build/deploy, unit testing |
+| `api-rpc-horizon` | Setting up API access: full method references for both servers, migration guide, historical data fallbacks |
+| `frontend-stellar-sdk` | Connecting wallets (Freighter, Wallets Kit v2), building/signing/submitting transactions, passkey smart accounts |
+| `stellar-assets` | Issuing a classic asset, SAC address derivation, using an asset inside a Soroban contract, SEP standards |
+| `common-pitfalls` | Hit a confusing error or something works locally but not on testnet: 15 documented gotchas with fixes |
+| `security` | Pre-deploy review: missing auth, reinitialization, overflow, storage collisions, TTL as attack vector |
+| `testing` | Unit tests with soroban-sdk testutils, local Quickstart Docker, testnet setup, CI/CD template |
+| `ecosystem` | Finding integration targets: DeFi protocols, oracles, wallets, indexing tools, contract libraries |
 
 
 ## 4. Browser Automation

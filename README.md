@@ -101,7 +101,7 @@ All links are in the file.
 **Browser integration testing:** Claude in Chrome can open your running app, click through every user flow, and verify on-chain results without you touching the keyboard. The guide has the full smoke test prompt (create wallet → Friendbot → trustline → lock/unlock → verify balance) and the fix for the `oninput` event issue in Svelte.
 
 **Stellar-specific plugins:**
-- `stellar-dev:stellar-dev`: full Stellar development playbook (Soroban, SDKs, RPC, wallet integration, passkeys, security patterns). Pre-installed in Claude Code.
+- `stellar-dev:stellar-dev`: 8-module playbook covering Soroban contract development (Rust), RPC vs Horizon API reference, frontend + wallet integration (Freighter, Wallets Kit v2, passkeys), classic assets + SAC bridge, 15 documented pitfalls with fixes, security checklist, testing strategy (unit + local Quickstart + testnet), and an ecosystem catalog of DeFi protocols, oracles, and tools. Pre-installed in Claude Code.
 - `openzeppelin-skills`: three skills for secure Stellar contract development, plus the OZ MCP server for AI-assisted contract generation. Install with `/plugin marketplace add OpenZeppelin/openzeppelin-skills`.
 
 Full slash command reference, keyboard shortcuts, and CLI flags are in the file.
